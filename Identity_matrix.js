@@ -30,12 +30,12 @@ Given an integer input `n`, output the `n x n` identity matrix. The identity mat
 var x = function(number) {
     return [...Array(number)].map(function(value, key1, arr) {
         return arr.map(function(value, key2) {
-            return key1 == key2 ? 1 : 0;
+            return +(key1 == key2);
         });
     });
 }
 
-var y=n=>[...Array(n)].map((V,K,A)=>A.map((v,k)=>K==k?1:0))
+var y=n=>[...Array(n)].map((V,K,A)=>A.map((v,k)=>+(K==k)))
 
 x(4);
 y(4);
